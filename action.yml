@@ -24,9 +24,7 @@ runs:
         GITHUB_TOKEN: ${{ inputs.github-token }}
         VB_API_URL: ${{ inputs.VB_API_URL }}
         VB_API_KEY: ${{ inputs.VB_API_KEY }}
-      run: |
-            ls
-            ${{ github.action_path }}/entrypoint.sh
+      run: bash ${{ github.action_path }}/entrypoint.sh
 
     - shell: bash
       if: always()
@@ -34,4 +32,4 @@ runs:
         GITHUB_TOKEN: ${{ inputs.github-token }}
         VB_API_URL: ${{ inputs.VB_API_URL }}
         VB_API_KEY: ${{ inputs.VB_API_KEY }}
-      run: ${{ github.action_path }}/cleanup.sh
+      run: bash ${{ github.action_path }}/cleanup.sh

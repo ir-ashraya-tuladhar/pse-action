@@ -220,7 +220,6 @@ main() {
     if [ -z "$VB_API_URL" ] || [ -z "$VB_API_KEY" ] || [ -z "$GITHUB_TOKEN" ]; then
         log_error "Required environment variables not set"
         exit 1
-    }
 
     # Execute steps
     setup_docker
